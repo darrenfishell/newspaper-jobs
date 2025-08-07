@@ -1,0 +1,13 @@
+name: newspaper-jobs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - dbt-core
+  - dbt-duckdb
+  - dlt
+  - pandas
+  - tqdm
+  - notebook
+prefix: /Users/Darren/miniconda3/envs/newspaper-jobs
