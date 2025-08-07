@@ -1,5 +1,5 @@
 SELECT
-    split_part(area_title, ' --', 1) AS area,
+    split_part(area_title, ' --', 1) AS state_name,
     year as year,
     industry_code,
     industry_title,
@@ -12,5 +12,5 @@ SELECT
 FROM {{ source('qcew', 'qcew_statewide_annual_average') }}
 WHERE (agglvl_code = 51 AND own_code = 5)
 OR (agglvl_code = 58
-    AND industry_code IN (511110, 513110)
+    AND industry_code IN ('511110', '513110')
     AND own_code =5)
