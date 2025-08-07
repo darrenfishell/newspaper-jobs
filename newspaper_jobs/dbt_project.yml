@@ -31,12 +31,12 @@ clean-targets:         # directories to be removed by `newspaper_jobs clean`
 # files using the `{{ config(...) }}` macro.
 models:
   newspaper_jobs:
-    bronze:
-      +materialized: table
-      +schema: bronze
     silver:
-      +materialized: view
+      +materialized: table
       +schema: silver
-    gold:
+    tableau_public:
       +materialized: view
-      +schema: gold
+      +schema: tableau_public
+      +post_hook: [
+        "COPY (SELECT * FROM {{ this }}) TO '../data/tableau_public/{{ this.name }}.csv' WITH CSV HEADER"
+      ]
