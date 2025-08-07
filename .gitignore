@@ -5,8 +5,6 @@ secrets.toml
 **/__pycache__/
 **/*.py[cod]
 **/*$py.class
-# ignore duckdb
-*.duckdb
 *.wal
 .idea
 .dlt
