@@ -1,3 +1,7 @@
+{{ config(
+    post_hook="COPY (SELECT * FROM {{ this }}) TO '../data/qcew_statewide_annual_average_tableau.csv' WITH CSV HEADER"
+) }}
+
 SELECT
     split_part(area_title, ' --', 1) AS state_name,
     year as year,
