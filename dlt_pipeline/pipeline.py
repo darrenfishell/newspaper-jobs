@@ -2,7 +2,6 @@ import dlt
 import requests
 import pandas as pd
 import zipfile
-import re
 
 from io import BytesIO
 from datetime import datetime
@@ -85,7 +84,7 @@ def qcew():
                         records = _process_csv(csv_bytes=file_bytes, filename=filename)
                         yield records
 
-    return qcew_newspaper_publishing_yearly
+    return qcew_statewide_annual_average
 
 def main(dev_mode=False):
 
