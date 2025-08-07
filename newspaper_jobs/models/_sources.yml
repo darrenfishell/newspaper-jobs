@@ -1,0 +1,6 @@
+sources:
+  - name: qcew
+    description: 'Quarterly census of employment and wages'
+    schema: bronze
+    tables:
+      - name: qcew_statewide_annual_average
