@@ -31,9 +31,10 @@ clean-targets:         # directories to be removed by `newspaper_jobs clean`
 # files using the `{{ config(...) }}` macro.
 models:
   newspaper_jobs:
-    silver:
-      +materialized: table
-      +schema: silver
+#   Demonstration schema definition for other models
+#    silver:
+#      +materialized: table
+#      +schema: silver
     tableau_public:
       +materialized: view
       +schema: tableau_public
